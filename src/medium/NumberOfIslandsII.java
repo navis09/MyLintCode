@@ -23,7 +23,7 @@ import java.util.List;
 
 
 
-public class NumberOfIslandII {
+public class NumberOfIslandsII {
     /**
      * @param n: An integer
      * @param m: An integer
@@ -36,12 +36,18 @@ public class NumberOfIslandII {
             return Arrays.asList(new Integer[]{0});
         }
         List<Integer> resultList = new ArrayList<>();
-        int numb
+        int numb;
         for (int i = 0; i < operators.length; i++) {
             if (isAdjacentIsland(operators[i])) {
 
             }
         }
+
+        return resultList;
+    }
+
+    private boolean isAdjacentIsland(Point operator) {
+        return false;
     }
 
     class Point {
