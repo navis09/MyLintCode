@@ -42,6 +42,7 @@ public class CombinationAndJudgementPrimeNumber {
      * total : 5
      * low : 3 (value: 4)
      * high: 7 (value: 8)
+     * Then iterate from index 3 to 7, like 234,235,236,237,238 and decide if the total value is prime.
      *
      *
      * @param a The array
