@@ -23,5 +23,24 @@ public class NumberOfIslandsII {
      * @param operators: an array of point
      * @return: an integer array
      */
+    public List<Integer> numIslands2(int n, int m, Point[] operators) {
+        // write your code here
+        if (n < 0 || m < 0 || operators == null ||operators.length == 0) {
+            return new ArrayList<>();
+        }
+        List<Integer> resultList = new ArrayList<>();
+        int numb;
+        for (int i = 0; i < operators.length; i++) {
+            if (isAdjacentIsland(operators[i])) {
+
+            }
+        }
+
+        return resultList;
+    }
+
+    private boolean isAdjacentIsland(Point operator) {
+        return false;
+    }
 
 }
