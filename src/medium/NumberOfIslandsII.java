@@ -33,7 +33,7 @@ public class NumberOfIslandsII {
     public List<Integer> numIslands2(int n, int m, Point[] operators) {
         // write your code here
         if (n < 0 || m < 0 || operators == null ||operators.length == 0) {
-            return Arrays.asList(new Integer[]{0});
+            return new ArrayList<>();
         }
         List<Integer> resultList = new ArrayList<>();
         int numb;
