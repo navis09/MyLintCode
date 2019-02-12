@@ -1,9 +1,5 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Given a n,m which means the row and column of the 2D matrix and an array of pair A( size k).
  * Originally, the 2D matrix is all 0 which means there is only sea in the matrix.
@@ -20,9 +16,6 @@ import java.util.List;
  *     Point(int a, int b) { x = a; y = b; }
  * }
  */
-
-
-
 public class NumberOfIslandsII {
     /**
      * @param n: An integer
@@ -50,13 +43,4 @@ public class NumberOfIslandsII {
         return false;
     }
 
-    class Point {
-        int x;
-        int y;
-        Point() { x = 0; y = 0; }
-        Point(int a, int b) {
-            x = a;
-            y = b;
-        }
-    }
 }
