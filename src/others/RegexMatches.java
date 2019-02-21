@@ -8,6 +8,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexMatches {
+
+    public static final String IP_REGEX = "(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)";
+    public static final String PORT_REGEX = "([0-9]|[1-9]\\d{1,3}|[1-5]\\d{4}|6[0-4]\\d{4}|65[0-4]\\d{2}|655[0-2]\\d|6553[0-5])";
+
+    String ipAndPortRegex = IP_REGEX + ":" + PORT_REGEX;
+    String multiAddressRegex = ipAndPortRegex + "(;" + ipAndPortRegex + ")*";
+
     public static void main( String args[] ){
 
         // 按指定模式在字符串查找
@@ -34,5 +41,13 @@ public class RegexMatches {
         int[] a = new int[5];
         Arrays.sort(a);
         list.hashCode();
+
+
+        String ipAndPortRegex = IP_REGEX + ":" + PORT_REGEX;
+        String multiAddressRegex = ipAndPortRegex + "(;" + ipAndPortRegex + ")*";
+
+        System.out.println("127.0.0.1".matches(multiAddressRegex));
     }
+
+
 }
