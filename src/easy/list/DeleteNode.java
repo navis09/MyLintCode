@@ -1,4 +1,4 @@
-package easy;
+package easy.list;
 
 
 /**
@@ -56,7 +56,7 @@ public class DeleteNode {
         return headBefore.next;
     }
 
-    private static void printListNode(ListNode head) {
+    public static void printListNode(ListNode head) {
         while (head != null) {
             System.out.print(head.val + "\t");
             head = head.next;

@@ -1,5 +1,7 @@
-package easy;
+package easy.list;
 
+
+import easy.basic.ListNode;
 
 /**
  * Reverse a singly linked list.
@@ -22,12 +24,4 @@ public class ReverseLinkedList {
         return cur;
     }
 
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode (int val) {
-        this.val = val;
-    }
 }

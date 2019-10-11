@@ -1,4 +1,4 @@
-package easy;
+package easy.string;
 
 public class RotateString {
 

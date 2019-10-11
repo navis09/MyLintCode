@@ -1,4 +1,7 @@
-package easy;
+package easy.tree;
+
+import easy.basic.TreeNode;
+import easy.basic.TreeNodeNPath;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,22 +91,4 @@ public class BinaryTreePaths {
 
     }
 
-}
-
-class TreeNodeNPath {
-    TreeNode treeNode;
-    String path;
-    TreeNodeNPath(TreeNode treeNode, String path) {
-        this.treeNode = treeNode;
-        this.path = path;
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left, right;
-    TreeNode(int val) {
-        this.val = val;
-        this.left = this.right = null;
-    }
 }

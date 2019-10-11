@@ -1,9 +1,6 @@
 package easy;
 
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  *
  * You are standing at position 0 on an infinite number line. There is a goal at position target.

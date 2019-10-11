@@ -1,5 +1,9 @@
-package easy;
+package easy.tree;
 
+
+import easy.basic.ListNode;
+import easy.basic.TreeNode;
+import easy.basic.TreeNodeWithLevel;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -85,15 +89,5 @@ public class ConvertBinaryTree {
             }
             System.out.println();
         }
-    }
-}
-
-class TreeNodeWithLevel {
-    TreeNode treeNode;
-    int level;
-
-    public TreeNodeWithLevel(TreeNode treeNode, int level) {
-        this.treeNode = treeNode;
-        this.level = level;
     }
 }
