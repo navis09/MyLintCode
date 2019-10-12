@@ -1,7 +1,7 @@
 package easy.tree;
 
 
-import easy.tree.TreeNode;
+import easy.basic.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

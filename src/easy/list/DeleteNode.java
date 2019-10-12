@@ -1,6 +1,8 @@
 package easy.list;
 
 
+import easy.basic.ListNode;
+
 /**
  * Given a linked list, delete the nth to mth nodes in the linked list, and return the head node of the linked list.
  *
