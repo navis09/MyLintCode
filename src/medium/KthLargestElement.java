@@ -1,6 +1,11 @@
 package medium;
 
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Random;
+
 import static easy.Sorting.print;
 
 /**
@@ -21,6 +26,13 @@ public class KthLargestElement {
         int[] nums = new int[]{9,3,2,4,8,5,3,2,21,54,5};
         print(nums);
         System.out.println(new KthLargestElement().kthLargestElement(3, nums));
+        print(nums);
+        System.out.println(new KthLargestElement().findKthLargest(nums, 3));
+        print(nums);
+
+        int[] res = Arrays.copyOf(nums, nums.length);
+        res[1] = res[0];
+        print(res);
         print(nums);
     }
 
@@ -66,6 +78,25 @@ public class KthLargestElement {
             return nums[k];
 
 
+    }
+
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        for (int i = 0; i < nums.length; i++) {
+            pq.add(nums[i]);
+            System.out.println(pq);
+        }
+        while(k > 1) {
+            pq.poll();
+            System.out.println(pq);
+            k--;
+        }
+        return pq.poll();
     }
 
 }

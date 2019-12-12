@@ -48,7 +48,42 @@ public class LongestSubstring {
         return max;
     }
 
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        // the minimum length of longest substring should be 1
+        int maxLen = 1;
+        // map to put character and its index
+        Map<Character, Integer> characterToIndex = new HashMap<>();
+
+        int len = s.length();
+        int subLength = 0;
+        for (int i = 0; i < len; i++) {
+            char c = s.charAt(i);
+
+            if (characterToIndex.containsKey(c)) {
+                int index = characterToIndex.get(c);
+                subLength = Math.min(subLength + 1, i - index);
+            } else {
+                subLength += 1;
+            }
+            if (subLength > maxLen) {
+                maxLen = subLength;
+            }
+
+            characterToIndex.put(c, i);
+        }
+        return maxLen;
+    }
+
     public static void main(String[] args) {
+
         System.out.println(new LongestSubstring().lengthOfLongestSubstring("an++--viaj"));
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring("bbbbbbb"));
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring("dvdf"));
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring2("an++--viaj"));
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring2("bbbbbbb"));
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring2("dvdf"));
     }
 }

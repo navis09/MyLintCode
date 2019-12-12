@@ -1,5 +1,6 @@
 package medium;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -34,6 +35,34 @@ public class LetterCombinations {
             }
         }
         list.addAll(queue);
+        return list;
+    }
+
+    String[] arr = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    public List<String> letterCombinations2(String digits) {
+        List<String> list = new ArrayList<>();
+        list.add("");
+        for (int i = 0; i < digits.length(); i++) {
+            int num = digits.charAt(i) - '0';
+            while(true) {
+                String s = list.get(0);
+                if (s.length() == i + 1) {
+                    break;
+                }
+                list.remove(0);
+                list.addAll(combine(s, num));
+            }
+
+        }
+        return list;
+    }
+
+    private List<String> combine(String s, int num) {
+        List<String> list = new ArrayList<>();
+        String toCombine = arr[num];
+        for (int i = 0; i < toCombine.length(); i++) {
+            list.add(s + toCombine.charAt(i));
+        }
         return list;
     }
 
@@ -78,7 +107,8 @@ public class LetterCombinations {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LetterCombinations().letterCombinations("2345"));
+        System.out.println(new LetterCombinations().letterCombinations("23"));
+        System.out.println(new LetterCombinations().letterCombinations2("23"));
     }
 
 }
